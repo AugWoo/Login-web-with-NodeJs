@@ -18,6 +18,8 @@ function login() {
     },
     body: JSON.stringify(req),
   })
+    .then(res => res.json())
+    .then(json => console.log(json))
 }
 
 loginBtn.addEventListener('click', login);
